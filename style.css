@@ -1,0 +1,89 @@
+/*Elementos Generales*/
+body{
+    background-color: #0A192F;
+}
+h1{
+    font-size: 50px;
+    font-family: "Orbitron", serif;
+    color: #0A192F;
+}
+p{
+    font-size: 20px;
+    font-family: "Orbitron", serif;
+    color: #0A192F;
+}
+/* Clases de Bootstrap*/
+.container-fluid{
+    background-color: #E85D04 ;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    
+}
+.container p{
+    color: aliceblue;
+}
+/* Clases Personalizadas*/
+.herramientas{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.herramientas canvas{
+    color: #E85D04;
+    width: 650px;
+    height: 450px;
+    margin-top: 5px;
+}
+.herramientas #funcionalidades{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.btn-container{
+    flex: 1;
+    border: #E85D04 solid;
+}
+.iconos{
+    width: 100%;
+    font-size: 40px;
+    background-color: whitesmoke;
+    color: #0A192F;
+}
+.iconos:hover{
+    background-color: #0A192F;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+/* Adaptable - Responsivo*/
+@media screen and (max-width:770px) {
+    .herramientas canvas{
+        width: 550px;
+    }
+}
+@media screen and (max-width:570px) {
+    .herramientas canvas{
+        width: 350px;
+        height: 350px;
+        margin-top: 5px;
+    }
+    .iconos{
+        font-size: 25px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:360px) {
+    .herramientas canvas{
+        width: 280px;
+        height: 280px;
+        margin-top: 5px;
+    }
+}
