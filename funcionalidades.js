@@ -8,6 +8,7 @@ let borrado = document.getElementById("borrado")
 let color = document.getElementById("color")
 let descargar = document.getElementById("descargar")
 let drawing = false
+let grosor=document.getElementById("grosor")
 
 /*Funciones basicas de interacción*/
 function inicializar() {
@@ -41,7 +42,6 @@ dibujar.addEventListener("click", function () {
     pizarra.style.pointerEvents = "auto"
     pizarra.style.cursor = "crosshair"
     dimension.strokeStyle = "black"
-    dimension.lineWidth = 2
 })
 
 /* Iniciar Dibujo*/
@@ -67,7 +67,6 @@ pizarra.addEventListener("mousemove", function (event) {
 borradoGoma.addEventListener("click", function () {
     pizarra.style.cursor = "url('recursos/borrador.png'), auto"
     dimension.strokeStyle = "whitesmoke"
-    dimension.lineWidth = 20
 })
 
 /*Borrado total del pizarron*/
@@ -83,7 +82,6 @@ color.addEventListener("click", function () {
     seleccionarColor.click()
     seleccionarColor.addEventListener("input", function () {
         pizarra.style.cursor = "crosshair"
-        dimension.lineWidth = 2
         dimension.strokeStyle = seleccionarColor.value;
     })
 })
@@ -94,6 +92,10 @@ descargar.addEventListener("click", function () {
     enlace.download = "dibujo.png";
     enlace.href = pizarra.toDataURL("image/png");
     enlace.click()
+})
+/*Grosor*/
+grosor.addEventListener("input",function(){
+    dimension.lineWidth=grosor.value
 })
 
 /* Consideraciones para moviles*/
