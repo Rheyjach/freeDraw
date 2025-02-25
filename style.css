@@ -49,6 +49,7 @@ p{
 .btn-container{
     flex: 1;
     border: #E85D04 solid;
+    display: flex;
 }
 .iconos{
     width: 100%;
@@ -79,11 +80,17 @@ p{
     p{
         font-size: 15px;
     }
+    #grosor{
+        width: 45px;
+    }
 }
 @media screen and (max-width:360px) {
     .herramientas canvas{
         width: 280px;
         height: 280px;
         margin-top: 5px;
+    }
+    #grosor{
+        width: 25px;
     }
 }
