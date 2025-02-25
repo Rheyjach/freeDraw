@@ -32,7 +32,7 @@ function fondoPizarron() {
 }
 
 
-/*Ajustar tamaño */
+/*Dimensiones del Canvas(Pizarron)*/
 pizarra.width = pizarra.offsetWidth;
 pizarra.height = pizarra.offsetHeight
 pizarra.style.pointerEvents = "none";
@@ -41,7 +41,6 @@ pizarra.style.pointerEvents = "none";
 dibujar.addEventListener("click", function () {
     pizarra.style.pointerEvents = "auto"
     pizarra.style.cursor = "crosshair"
-    dimension.strokeStyle = "black"
 })
 
 /* Iniciar Dibujo*/
