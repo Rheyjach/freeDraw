@@ -34,6 +34,7 @@ p{
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
 }
 .herramientas canvas{
     color: #E85D04;
