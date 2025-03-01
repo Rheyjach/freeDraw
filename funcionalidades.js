@@ -9,6 +9,7 @@ let color = document.getElementById("color")
 let descargar = document.getElementById("descargar")
 let drawing = false
 let grosor=document.getElementById("grosor")
+let valorGrosor=document.getElementById("valorGrosor")
 
 /*Funciones basicas de interacción*/
 function inicializar() {
@@ -95,6 +96,7 @@ descargar.addEventListener("click", function () {
 /*Grosor*/
 grosor.addEventListener("input",function(){
     dimension.lineWidth=grosor.value
+    valorGrosor.textContent=grosor.value
 })
 
 /* Consideraciones para moviles*/
