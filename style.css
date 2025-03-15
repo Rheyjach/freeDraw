@@ -110,7 +110,7 @@ canvas{
 @media screen and (max-width:360px) {
     canvas{
         width: 280px;
-        height: 280px;
+        height: 310px;
     }
     .contenedor-opciones{
         width: 280px;
