@@ -18,6 +18,7 @@ canvas{
     padding: 10px;
     color: #0A192F;
     margin-top: 0;
+    padding: 40px;
 }
 .container{
     display: flex;
