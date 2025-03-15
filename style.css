@@ -8,6 +8,7 @@ canvas{
     width: 750px;
     height: 400px;
     margin: 5px;
+    border: solid #E85D04;
 }
 
 /*Clases de Bootstrap*/
