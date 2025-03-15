@@ -1,5 +1,5 @@
-/* Variables */
-let horaActual = document.getElementById("hora")
+/* Variables*/
+let horaActual=document.getElementById("horaActual")
 let pizarra = document.getElementById("miCanvas")
 let dimension = pizarra.getContext("2d")
 let dibujar = document.getElementById("dibujar")
@@ -11,19 +11,21 @@ let drawing = false
 let grosor=document.getElementById("grosor")
 let valorGrosor=document.getElementById("valorGrosor")
 
+
+
 /*Funciones basicas de interacción*/
-function inicializar() {
+function llamarFuncionHora() {
     fondoPizarron()
-    setInterval(reloj, 1000)
+    setInterval(funcionHora,1000)
 }
 
-/*Funcionalidad del reloj*/
-function reloj() {
-    let fecha = new Date()
-    let hora = String(fecha.getHours()).padStart(2, "0")
-    let minutos = String(fecha.getMinutes()).padStart(2, "0")
-    let segundos = String(fecha.getSeconds()).padStart(2, "0")
-    horaActual.textContent = `${hora}:${minutos}:${segundos}`
+/* Funcionalidad reloj*/
+function funcionHora(){
+    let objetoFecha= new Date()
+    let hora=String(objetoFecha.getHours()).padStart(2,"0")
+    let minutos=String(objetoFecha.getMinutes()).padStart(2,"0")
+    let segundos=String(objetoFecha.getSeconds()).padStart(2,"0")
+    horaActual.textContent=`${hora}:${minutos}:${segundos}`
 }
 
 /* Fondo del Pizarron*/
@@ -31,7 +33,6 @@ function fondoPizarron() {
     dimension.fillStyle = "whitesmoke"
     dimension.fillRect(0, 0, pizarra.width, pizarra.height)
 }
-
 
 /*Dimensiones del Canvas(Pizarron)*/
 pizarra.width = pizarra.offsetWidth;
@@ -42,6 +43,8 @@ pizarra.style.pointerEvents = "none";
 dibujar.addEventListener("click", function () {
     pizarra.style.pointerEvents = "auto"
     pizarra.style.cursor = "crosshair"
+    dimension.strokeStyle="black"
+    
 })
 
 /* Iniciar Dibujo*/
@@ -93,6 +96,7 @@ descargar.addEventListener("click", function () {
     enlace.href = pizarra.toDataURL("image/png");
     enlace.click()
 })
+
 /*Grosor*/
 grosor.addEventListener("input",function(){
     dimension.lineWidth=grosor.value
