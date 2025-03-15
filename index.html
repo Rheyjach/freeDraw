@@ -10,41 +10,35 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--Conexion Css-->
+    <!--Conexion CSS-->
     <link rel="stylesheet" href="style.css">
-    <!--Fuentes-->
+    <!--Fuentes de texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
 </head>
 
-<body onload="inicializar()" class="d-flex flex-column" style="min-height: 100vh;">
-    <!--Encabezado-->
-    <header class="container-fluid text-center">
+<body onload="llamarFuncionHora()" class="d-flex flex-column" style="min-height: 100vh;">
+    <header class="container-fluid">
         <h1>freeDraw</h1>
-        <p id="hora"></p>
+        <span id="horaActual"></span>
     </header>
-    <!--Sección Principal-->
-    <section class="container text-center flex-grow-1">
-        <p class="container">Abre tu mente y crea un dibujo libre que luego podrás descargar para recordarlo</p>
-        <div class="herramientas">
-            <div id="funcionalidades">
-                <div class="btn-container"><button class="iconos" id="dibujar"><i class="bi bi-pencil"></i></button></div>
-                <div class="btn-container"><button class="iconos" id="borradoGoma"><i class="bi bi-eraser"></i></button></div>
-                <div class="btn-container"><button class="iconos" id="borrado"><i class="bi bi-trash"></i></button></div>
-                <div class="btn-container"><button class="iconos" id="color"><i class="bi bi-palette"></i></button></div>
-                <div class="btn-container"><button class="iconos" id="descargar"><i class="bi bi-download"></i></button></div>
-                <div class="btn-container"><input type="range" id="grosor" min="1" max="15" style="accent-color: #E85D04; cursor: pointer;" value="1">
-                <span id="valorGrosor"></span></div>
-            </div>
-            <canvas id="miCanvas" style="border: solid;" disabled></canvas>
+    <div class="container flex-grow-1">
+        <div class="contenedor-opciones">
+            <div class="iconos"><i class="bi bi-pencil" id="dibujar"></i></div>
+            <div class="iconos"><i class="bi bi-eraser" id="borradoGoma"></i></div>
+            <div class="iconos"><i class="bi bi-trash" id="borrado"></i></div>
+            <div class="iconos"><i class="bi bi-palette" id="color"></i></div>
+            <div class="iconos"><i class="bi bi-download" id="descargar"></i></div>
+            <div class="iconos"><input type="range" id="grosor" min="1" max="15" value="1"><span id="valorGrosor"></span></div>
         </div>
-    </section>
-    <!--Pie de Pagina-->
-    <footer class="container-fluid text-center">
-        <p>&copy; 2025 - Rheyjach Arrieta</p>
+        <canvas id="miCanvas"></canvas>
+    </div>
+    <footer class="container-fluid">
+        &copy; 2025 - Rheyjach Arrieta
     </footer>
-    <!--Conexion a JavaScript de Bootstrap-->
+
     <script src="funcionalidades.js"></script>
 </body>
 
