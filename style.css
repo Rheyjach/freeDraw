@@ -57,7 +57,7 @@ canvas{
 #grosor{
     cursor: pointer;
     accent-color:  #0A192F;
-    margin-right: 3px;
+    margin-right: 5px;
 }
 #grosor:hover{
     accent-color: whitesmoke;
